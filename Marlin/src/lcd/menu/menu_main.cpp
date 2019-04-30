@@ -179,15 +179,20 @@ void menu_main() {
         if (!card_open) {
           MENU_ITEM(submenu, MSG_CARD_MENU, menu_sdcard);
           #if !PIN_EXISTS(SD_DETECT)
-            MENU_ITEM(gcode, MSG_CHANGE_SDCARD, PSTR("M21"));  // SD-card changed by user
+            #if ENABLED(USB_SD_ONBOARD)
+              MENU_ITEM(gcode, MSG_RELEASE_SDCARD, PSTR("M22"));  // Release onboard SD card for USB access
+            #else
+              MENU_ITEM(gcode, MSG_CHANGE_SDCARD, PSTR("M21"));  // SD-card changed by user
+            #endif
           #endif
         }
       }
       else {
         #if !PIN_EXISTS(SD_DETECT)
           MENU_ITEM(gcode, MSG_INIT_SDCARD, PSTR("M21")); // Manually init SD-card
+        #elif !ENABLED(USB_SD_ONBOARD)  // Prevent 'No SD card' message with onboard SD
+          MENU_ITEM(function, MSG_NO_CARD, NULL);
         #endif
-        MENU_ITEM(function, MSG_NO_CARD, NULL);
       }
     #endif // !HAS_ENCODER_WHEEL && SDSUPPORT
 
@@ -260,15 +265,20 @@ void menu_main() {
       if (!card_open) {
         MENU_ITEM(submenu, MSG_CARD_MENU, menu_sdcard);
         #if !PIN_EXISTS(SD_DETECT)
-          MENU_ITEM(gcode, MSG_CHANGE_SDCARD, PSTR("M21"));  // SD-card changed by user
+          #if ENABLED(USB_SD_ONBOARD)
+            MENU_ITEM(gcode, MSG_RELEASE_SDCARD, PSTR("M22"));  // Release onboard SD card for USB access
+          #else
+            MENU_ITEM(gcode, MSG_CHANGE_SDCARD, PSTR("M21"));  // SD-card changed by user
+          #endif
         #endif
       }
     }
     else {
       #if !PIN_EXISTS(SD_DETECT)
         MENU_ITEM(gcode, MSG_INIT_SDCARD, PSTR("M21")); // Manually init SD-card
+      #elif !ENABLED(USB_SD_ONBOARD)  // Prevent 'No SD card' message with onboard SD
+        MENU_ITEM(function, MSG_NO_CARD, NULL);
       #endif
-      MENU_ITEM(function, MSG_NO_CARD, NULL);
     }
   #endif // HAS_ENCODER_WHEEL && SDSUPPORT
 
