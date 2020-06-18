@@ -136,7 +136,7 @@
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "c8889d55-06e6-492c-aba7-553a06bd54c3"
 
 // @section extruder
 
