@@ -841,7 +841,7 @@
 #define DEFAULT_STEPPER_DEACTIVE_TIME 120
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
-#define DISABLE_INACTIVE_Z true  // Set 'false' if the nozzle could fall onto your printed part!
+#define DISABLE_INACTIVE_Z false  // Set 'false' if the nozzle could fall onto your printed part!
 #define DISABLE_INACTIVE_E true
 
 // If the Nozzle or Bed falls when the Z stepper is disabled, set its resting position here.
@@ -2260,7 +2260,7 @@
  */
 #if HAS_TRINAMIC_CONFIG
 
-  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
+  #define HOLD_MULTIPLIER    0.3  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
