@@ -465,7 +465,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 310 // CJ
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -542,9 +542,9 @@
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   // 24V default Ender-5 heated bed with magnetic build surface CJ
-  #define DEFAULT_bedKp 112.99
-  #define DEFAULT_bedKi 22.05
-  #define DEFAULT_bedKd 386.05
+  #define DEFAULT_bedKp 131.64
+  #define DEFAULT_bedKi 26.30
+  #define DEFAULT_bedKd 439.25
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
