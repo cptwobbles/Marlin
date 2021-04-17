@@ -168,7 +168,7 @@
  */
 //#define MK2_MULTIPLEXER
 #if ENABLED(MK2_MULTIPLEXER)
-  // Override the default DIO selector pins here, if needed.
+  // Override the default DIO selector dns here, if needed.
   // Some pins files may provide defaults for these pins.
   //#define E_MUX0_PIN 40  // Always Required
   //#define E_MUX1_PIN 42  // Needed for 3 to 8 inputs
@@ -500,9 +500,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // 24V 40W V6 Clone @ 230 CJ
-    #define DEFAULT_Kp  15.03
-    #define DEFAULT_Ki   0.85
-    #define DEFAULT_Kd  66.74
+    #define DEFAULT_Kp  16.44
+    #define DEFAULT_Ki   0.97
+    #define DEFAULT_Kd  69.81
   #endif
 #endif // PIDTEMP
 
