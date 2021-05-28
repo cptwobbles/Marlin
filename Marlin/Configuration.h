@@ -472,7 +472,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 310 // CJ
+#define HEATER_0_MAXTEMP 315 // CJ
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -480,7 +480,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      110 // CJ
+#define BED_MAXTEMP      120 // CJ
 #define CHAMBER_MAXTEMP  60
 
 /**
@@ -808,7 +808,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 430 } // CJ
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 396 } // CJ
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1057,7 +1057,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -35, 0, 0 } // CJ
+#define NOZZLE_TO_PROBE_OFFSET { -41, -2, 0 } // CJ
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1708,14 +1708,14 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200 // CJ
+#define PREHEAT_1_TEMP_HOTEND 210 // CJ
 #define PREHEAT_1_TEMP_BED     60 // CJ
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240 // CJ
-#define PREHEAT_2_TEMP_BED     90 // CJ
+#define PREHEAT_2_TEMP_BED    100 // CJ
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
