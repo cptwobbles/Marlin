@@ -518,9 +518,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // 24V 40W V6 Clone @ 230 CJ
-    #define DEFAULT_Kp  16.44
-    #define DEFAULT_Ki   0.97
-    #define DEFAULT_Kd  69.81
+    #define DEFAULT_Kp  17.40
+    #define DEFAULT_Ki   1.22
+    #define DEFAULT_Kd  62.00
   #endif
 #endif // PIDTEMP
 
